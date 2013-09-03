@@ -27,6 +27,29 @@
 \end{itemize}
 
 \subsection{The table.}
+\begin{align}
+[B, B] &= 0\\
+[p_x, x] &= - i\hbar \label{canbasic}\\
+[p_x, V(x)] &= -i\hbar \frac{\partial}{\partial_x} V(x)\\
+[N, a] &= - a\\
+[a, a^\dag] &= 1\\
+\end{align}
+\subsubsection{Canonical commutation relations}
+Relation \ref{canbasic} is an example of a canonical commutation relation. In general if $q_i$ are coordinates and $\pi_i$ are the canonically conjugate momenta to $q_i$, then
+\begin{equation}
+[\pi_i, q_j] = -i\hbar \delta_{ij}
+\end{equation}
+
+\subsubsection{Spin}
+In general,
+\begin{align}
+  [S_i, S_j] &= i\hbar \varepsilon_{ijk} S_k\\
+  [S_i, \mathbf{S}^2] &= 0
+\end{align}
+In addition, for spin-1/2 particles
+\begin{align}
+\{S_a, S_b\} = \hbar^2/2 \delta_{ab} . 
+\end{align}
 
 %\begin{tabular}{ l | r r }
 %            & $x$ & $p_x$ \\
@@ -34,17 +57,8 @@
 %  $x$ & \hyperref[self]{$0$} & \hyperref[unc]{$i \hbar$}\\
 %  \hyperref[def_p_x]{$p_x$} & $-i\hbar$ & $0$ \\
 %\end{tabular}
-\DTLloaddb[keys={A,B,C,D,E,F,G,H,I,J,K,L,M}]{commutators}{commutation-relations.csv}
-\renewcommand{\dtldisplayafterhead}{\hline} %
-\renewcommand{\dtlstringalign}{c} % make strings default to center-aligned
 
-%\renewcommand{\dtlbetweencols}{|} % this is fairly cosmetic, but I like it off
-\DTLdisplaydb{commutators}
 
-\DTLloaddb[keys={A,B,C,D}]{spin-one-half}{spin-one-half-system.csv}
-\DTLdisplaydb{spin-one-half}
-
-\newpage
 
 \subsection{Operator definitions.}
 \begin{itemize}
